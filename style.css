@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --ff: "Red Hat Display", sans-serif;
+  --fs-p: 16px;
+  --pc-Pale-blue: hsl(225, 100%, 94%);
+  --pc-Bright-blue: hsl(245, 75%, 52%);
+  --nc-Very-pale-blue: hsl(225, 100%, 98%);
+  --nc-Desaturated-blue: hsl(224, 23%, 55%);
+  --nc-Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  font-family: var(--ff);
+  background-color: var(--pc-Pale-blue);
+}
+
+body p {
+  font-size: var(--fs-p);
+}
+
+.container {
+  max-width: 450px;
+  margin: 4rem auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-img img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -4px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 8px 13px rgba(0, 0, 0, 0.25);
+}
+
+.hero-text {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.hero-text p {
+  padding: 2rem 3rem;
+  color: var(--nc-Desaturated-blue);
+}
+
+.pay-plan {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin-bottom: 2rem;
+  background-color: var(--nc-Very-pale-blue);
+  border-radius: 2rem;
+}
+
+.pay-plan .plan {
+  padding-left: 1rem;
+}
+
+.pay-plan .plan p {
+  color: var(--nc-Desaturated-blue);
+}
+
+.pay-plan .plan p span {
+  text-decoration: underline;
+}
+
+.pay-plan a {
+  padding-left: 7rem;
+  color: var(--pc-Bright-blue);
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn button {
+  width: 85%;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.btn button:nth-child(1) {
+  background-color: var(--pc-Bright-blue);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn button:nth-child(1):hover {
+  background-color: var(--nc-Desaturated-blue);
+}
+
+.btn button:nth-child(2) {
+  background-color: var(--nc-Very-pale-blue);
+  border: none;
+  color: var(--nc-Dark-blue);
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .header-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .pay-plan a {
+    padding-left: 4rem;
+  }
+}
